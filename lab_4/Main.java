@@ -6,6 +6,10 @@ import java.util.Comparator;
 
 
 public class Main {
+    /**
+     * C11 = 5 - define a class Clothes consisting at least from 5 fields
+     *
+     */
     public static void main(String[] args) {
         Clothes[] cloth = new Clothes[4];
 
