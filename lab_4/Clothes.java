@@ -1,4 +1,4 @@
-package lab4;
+package lab_4;
 
 public class Clothes {
     private String name;
