@@ -7,7 +7,7 @@ import java.util.Comparator;
 
 public class Main {
     /**
-     * C11 = 5 - define a class Clothes consisting at least from 5 fields
+     * C11 = 5 - define a class Clothes consisting of at least 5 fields
      *
      */
     public static void main(String[] args) {
@@ -27,14 +27,14 @@ public class Main {
 
         System.out.println("\n---Sorting by name alphabetically---\n");
         for (Clothes clothes : cloth) {
-            System.out.println(clothes.getName());
+            System.out.println(clothes.getName());      //outputting only names, to change - simply delete GetAtr method
         }
 
-        Arrays.sort(cloth, Comparator.comparing(Clothes::getSize));
+        Arrays.sort(cloth, Comparator.comparing(Clothes::getSize).reversed());
 
         System.out.println("\n---Sorted by size reversed---\n");
         for (Clothes clothes : cloth) {
-            System.out.println(clothes.getSize());
+            System.out.println(clothes.getSize());      //outputting only sizes, to change - simply delete GetAtr method
         }
     }
 }
