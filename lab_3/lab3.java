@@ -9,7 +9,7 @@ public class lab3 {
      *
      */
     public static void main(String[] args) {
-        String text = new String("Я на гору круту крем’яную\n" +
+        String text = ("Я на гору круту крем’яную\n" +
                 "Буду камінь важкий підіймать\n" +
                 "І, несучи вагу ту страшную,\n" +
                 "Буду пісню веселу співать.\n" +
@@ -33,14 +33,14 @@ public class lab3 {
         String len = sc.next();
         try
         {
-            int i = Integer.parseInt(len.trim());
+            Integer.parseInt(len.trim());
         }
         catch (NumberFormatException nfe)
         {
             System.out.println("Incorrect value:" + nfe.getMessage());
             System.exit(1);
         }
-        String replecedText = text.replaceAll("\\b([Є-ЯҐа-їґ’']|[а-яА-ЯЁё]|[a-zA-Z']){" + len + "}\\b", str);
-        System.out.println(replecedText);
+        String replacedText = text.replaceAll("\\b([Є-ЯҐа-їґ’']|[а-яА-ЯЁё]|[a-zA-Z'])*" + len + "\\b", str);
+        System.out.println(replacedText);
     }
 }
